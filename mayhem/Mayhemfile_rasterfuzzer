@@ -1,0 +1,9 @@
+project: savantenvs/cinder
+target: rasterfuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rasterfuzzer/testsuite
+cmds:
+  - cmd: /mayhem/rasterfuzzer
+    libfuzzer: true
+    timeout: 10

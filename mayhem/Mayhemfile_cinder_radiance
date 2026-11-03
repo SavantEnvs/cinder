@@ -1,0 +1,9 @@
+project: savantenvs/cinder
+target: cinder_radiance
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cinder_radiance/testsuite
+cmds:
+  - cmd: /mayhem/cinder_radiance
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/cinder
+target: cinder_json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cinder_json/testsuite
+cmds:
+  - cmd: /mayhem/cinder_json
+    libfuzzer: true
+    timeout: 10
